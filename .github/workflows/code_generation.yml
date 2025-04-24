@@ -9,11 +9,9 @@ on:
       - declaration.yaml  # or declaration.md
   workflow_dispatch:
   pull_request:
-    types: [opened, edited, reopened]
+    types: [opened, edited, reopened, created]
   issue_comment:
-    types: [created]
-  schedule:
-    - cron: '0 * * * *'  # every hour
+    types: [created, opened, edited, reopened]
 
 jobs:
   generate-code:
